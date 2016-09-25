@@ -12,7 +12,8 @@ public class Main {
 		Manager manager = new Manager("Lidia","Kaleta", 1000L, 250L);
 		System.out.println(manager.toString());
 		
-		
+		HasName manager2 = manager;
+		System.out.println(manager2.getName());
 	}
 
 }

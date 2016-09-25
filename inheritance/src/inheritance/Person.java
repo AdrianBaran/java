@@ -1,6 +1,6 @@
 package inheritance;
 
-public class Person {
+public class Person implements HasName {
 
 	private String firstName;
 	private String lastName;
@@ -59,6 +59,11 @@ public class Person {
 	public Person withLastName(String lastName) {
 		this.lastName = lastName;
 		return this;
+	}
+
+	@Override
+	public String getName() {
+		return firstName + "-" + lastName;
 	}
 	
 	
