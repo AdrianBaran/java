@@ -9,7 +9,8 @@ public class Main {
 		System.out.println(pereson);
 
 		
-		
+		Manager manager = new Manager("Lidia","Kaleta", 1000L, 250L);
+		System.out.println(manager.toString());
 		
 		
 	}

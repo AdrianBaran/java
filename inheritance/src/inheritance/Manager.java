@@ -25,6 +25,18 @@ public class Manager extends Person {
 		super(firstName, lastName, salary);
 		this.extraSalary = extraSalary;
 	}
+
+	public Manager() {
+	}
+
+	@Override
+	public String toString() {
+		return "Manager [extraSalary=" + extraSalary + ", getFirstName()="
+				+ getFirstName() + ", getSalary()=" + getSalary()
+				+ ", getLastName()=" + getLastName() + "]";
+	}
+	
+	
 	
 	
 	
