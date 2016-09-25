@@ -32,9 +32,37 @@ public class Person {
 		return lastName;
 	}
 
+
+	public Person(String firstName, String lastName, Long salary) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.salary = salary;
+	}
+
+	public Person() {
+		
+		System.out.println("Wywoluje domyslny konstruktor=");
+		
+	}
+
+	public Person(String firstName) {
+		this.firstName = firstName;
+	}
+	
+	
+	
+
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+	
+	public Person withLastName(String lastName) {
+		this.lastName = lastName;
+		return this;
+	}
+	
+	
+	
 
 }
 
