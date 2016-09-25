@@ -11,18 +11,22 @@ public class Main {
 		pereson.setSalary(0L);
 		
 		Person person2 = new Person("Lukasz","Jackowski", 2700L);
+		Manager manager2 = new Manager("Lukasz","Polubinski", -1000L);
+		Dog dog = new Dog("Szarik");
 
-		List<Person> personList = new ArrayList<>();
+		List<HasName> personList = new ArrayList<>();
 		personList.add(person2);
 		personList.add(pereson);
+		personList.add(manager2);
+		personList.add(dog);
 
-		for (int i = 0; i < personList.size(); i++) {
-			System.out.println(personList.get(i).getFirstName());
-
-		}
+//		for (int i = 0; i < personList.size(); i++) {
+//			System.out.println(personList.get(i).getFirstName());
+//
+//		}
 		
-		for (Person p : personList) {
-			System.out.println(p.getLastName());
+		for (HasName p : personList) {
+			System.out.println(p.getName());
 		}
 
 	//	System.out.println(pereson);
