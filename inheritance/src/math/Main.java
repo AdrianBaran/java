@@ -1,4 +1,4 @@
-package inheritance;
+package math;
 
 public class Main {
 
