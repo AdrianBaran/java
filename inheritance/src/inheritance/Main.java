@@ -7,6 +7,8 @@ public class Main {
 
 	public static void main(String[] args) {
 
+		BasePerson basePerson = new Person();
+		
 		Person pereson = new Person("Adrian").withLastName("Baran");
 		pereson.setSalary(0L);
 
