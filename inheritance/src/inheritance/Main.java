@@ -6,13 +6,13 @@ import java.util.List;
 public class Main {
 
 	public static void main(String[] args) {
-
-		BasePerson basePerson = new Person();
 		
 		Person pereson = new Person("Adrian").withLastName("Baran");
+		pereson.setCountry(Country.POLAND);
 		pereson.setSalary(0L);
 
 		Person person2 = new Person("Lukasz", "Jackowski", 2700L);
+		person2.setCountry(Country.UK);
 		Manager manager2 = new Manager("Lukasz", "Polubinski", -1000L);
 		Dog dog = new Dog("Szarik");
 
@@ -22,21 +22,33 @@ public class Main {
 		personList.add(manager2);
 		personList.add(dog);
 
+
+		List<BasePerson> basePersonList = new ArrayList<>();
+		basePersonList.add(pereson);
+		basePersonList.add(person2);
+		basePersonList.add(manager2);
+		
+		for (BasePerson bPerson : basePersonList) {
+			System.out.println(bPerson.getName() + " " + bPerson.getCountry());
+		}
+		
+		
+		
 		// for (int i = 0; i < personList.size(); i++) {
 		// System.out.println(personList.get(i).getFirstName());
 		//
 		// }
 
-		for (HasName p : personList) {
-			if (p instanceof Person) {
-				System.out.print("Human ");
-			} else if (p instanceof Dog) {
-				System.out.print("Animal ");
-			}
-
-			System.out.println(p.getName());
-
-		}
+//		for (HasName p : personList) {
+//			if (p instanceof Person) {
+//				System.out.print("Human ");
+//			} else if (p instanceof Dog) {
+//				System.out.print("Animal ");
+//			}
+//
+//			System.out.println(p.getName());
+//
+//		}
 
 		// System.out.println(pereson);
 

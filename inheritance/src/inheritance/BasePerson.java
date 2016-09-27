@@ -4,6 +4,15 @@ public abstract class BasePerson implements HasName {
 
 	protected String firstName;
 	protected String lastName;
+	protected Country country;
+
+	public Country getCountry() {
+		return country;
+	}
+
+	public void setCountry(Country country) {
+		this.country = country;
+	}
 
 	public String getFirstName() {
 		return firstName;
@@ -25,7 +34,7 @@ public abstract class BasePerson implements HasName {
 	public String getName() {
 		return firstName + "-" + lastName;
 	}
-	
+
 	public abstract String getMyDescription();
 
 }

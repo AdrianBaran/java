@@ -39,4 +39,12 @@ public class Person extends BasePerson {
 		return "I'm person!";
 	}
 
+	@Override
+	public String toString() {
+		return "Person [salary=" + salary + ", firstName=" + firstName
+				+ ", lastName=" + lastName + ", country=" + country + "]";
+	}
+	
+	
+
 }
